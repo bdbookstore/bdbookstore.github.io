@@ -1,1 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boighor - Online Book Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500&family=Montserrat:wght@400;500;600&display=swap">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Boighor</h1>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button id="cartBtn" class="cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount" class="cart-count">0</span>
+          </button>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Explore our collection of bestsellers, new releases, and timeless classics.</p>
+            <div class="hero-buttons">
+              <button id="shopNowBtn" class="btn btn-primary">Shop Now</button>
+              <button id="bestsellersBtn" class="btn btn-outline">Bestsellers</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Book collection">
+          </div>
+        </div>
+      </div>
+      <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="category-section">
+      <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        <p class="section-subtitle">Find your favorite genre</p>
+        
+        <div class="category-grid">
+          <div class="category-card primary">
+            <div class="category-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="category-info">
+              <h3>Fiction</h3>
+              <p>120+ books</p>
+            </div>
+          </div>
+          <div class="category-card secondary">
+            <div class="category-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="category-info">
+              <h3>Non-Fiction</h3>
+              <p>95+ books</p>
+            </div>
+          </div>
+          <div class="category-card accent">
+            <div class="category-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="category-info">
+              <h3>Romance</h3>
+              <p>75+ books</p>
+            </div>
+          </div>
+          <div class="category-card success">
+            <div class="category-icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <div class="category-info">
+              <h3>Children</h3>
+              <p>60+ books</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section id="shop" class="featured-section">
+      <div class="container">
+        <h2 class="section-title">Featured Books</h2>
+        <p class="section-subtitle">Discover our handpicked collection</p>
+        
+        <div id="featuredBooks" class="book-grid">
+          <!-- Featured books will be loaded here by JavaScript -->
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestseller Books Section -->
+    <section id="bestsellers" class="bestseller-section">
+      <div class="container">
+        <h2 class="section-title">Bestsellers</h2>
+        <p class="section-subtitle">Our most popular titles</p>
+        
+        <div id="bestsellerBooks" class="book-grid">
+          <!-- Bestseller books will be loaded here by JavaScript -->
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+          <div class="book-card-skeleton"></div>
+        </div>
+        
+        <div class="text-center">
+          <button id="viewAllBtn" class="btn-link">
+            View all bestsellers
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Features -->
+    <section class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon primary">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Free Delivery</h3>
+            <p>On orders above ৳1000</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon secondary">
+              <i class="fas fa-undo"></i>
+            </div>
+            <h3>Easy Returns</h3>
+            <p>7-day return policy</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon accent">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>Multiple payment options</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Read reviews from book lovers like you</p>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">"The delivery was prompt and the book was in perfect condition. I'm very satisfied with my purchase and will definitely be ordering again."</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Sarah Khan profile">
+              </div>
+              <div class="author-info">
+                <h4>Sarah Khan</h4>
+                <p>Dhaka</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-content">"I love the wide selection of books available. The pricing is also very reasonable compared to physical bookstores. Fast shipping too!"</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Rahim Ahmed profile">
+              </div>
+              <div class="author-info">
+                <h4>Rahim Ahmed</h4>
+                <p>Chittagong</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">"Great customer service! I had an issue with my order and they resolved it immediately. Will recommend to all my friends."</p>
+            <div class="testimonial-author">
+              <div class="author-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Nusrat Jahan profile">
+              </div>
+              <div class="author-info">
+                <h4>Nusrat Jahan</h4>
+                <p>Sylhet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Info Section -->
+    <section id="contact" class="store-info-section">
+      <div class="container">
+        <div class="store-info-grid">
+          <div class="store-location">
+            <h2>Visit Our Bookstore</h2>
+            <p>Experience our collection in person at our physical store</p>
+            
+            <div class="store-image">
+              <img src="https://images.unsplash.com/photo-1521056787327-865eb574a6a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bookstore interior">
+            </div>
+            
+            <div class="contact-grid">
+              <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                  <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+8801745872364</span>
+                  </li>
+                  <li>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+8801745872364</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>contact@boighor.com</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>123 Book Street, Dhaka</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="opening-hours">
+                <h3>Opening Hours</h3>
+                <ul>
+                  <li>
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 8:00 PM</span>
+                  </li>
+                  <li>
+                    <span>Saturday</span>
+                    <span>10:00 AM - 7:00 PM</span>
+                  </li>
+                  <li>
+                    <span>Sunday</span>
+                    <span>12:00 PM - 6:00 PM</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="payment-options">
+            <h2>Payment Options</h2>
+            <p>Multiple secure payment methods available</p>
+            
+            <div class="payment-card">
+              <h3>BKash Payment</h3>
+              <div class="bkash-info">
+                <div class="bkash-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div>
+                  <p>Send payment to:</p>
+                  <p class="bkash-number">01910327701</p>
+                </div>
+              </div>
+              <div class="payment-steps">
+                <ol>
+                  <li>Dial *247#</li>
+                  <li>Select "Send Money"</li>
+                  <li>Enter number: 01910327701</li>
+                  <li>Enter amount</li>
+                  <li>Enter reference: Your Order Number</li>
+                  <li>Enter PIN to confirm</li>
+                </ol>
+              </div>
+            </div>
+            
+            <div class="payment-card">
+              <h3>Other Payment Methods</h3>
+              <div class="payment-methods-grid">
+                <div class="payment-method">
+                  <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="payment-method">
+                  <i class="fab fa-cc-visa"></i>
+                </div>
+                <div class="payment-method">
+                  <i class="fab fa-cc-mastercard"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Boighor</h3>
+          <p>Your trusted online bookstore with a wide selection of books in various categories. We offer fast delivery and excellent customer service.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#bestsellers">Bestsellers</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-categories">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Fiction</a></li>
+            <li><a href="#">Non-Fiction</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Children</a></li>
+            <li><a href="#">Science Fiction</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +8801745872364</li>
+            <li><i class="fab fa-whatsapp"></i> +8801745872364</li>
+            <li><i class="fas fa-envelope"></i> contact@boighor.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Book Street, Dhaka</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Boighor Book Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart -->
+  <div id="shoppingCart" class="shopping-cart">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Shopping Cart</h2>
+        <button id="closeCartBtn" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="cart-body">
+        <div id="emptyCart" class="empty-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Your cart is empty</p>
+          <button id="shopNowBtnEmpty" class="btn btn-primary">Shop Now</button>
+        </div>
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be added here by JavaScript -->
+        </div>
+      </div>
+      
+      <div id="cartFooter" class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">৳0</span>
+        </div>
+        
+        <div class="cart-actions">
+          <button id="continueShoppingBtn" class="btn btn-outline">Continue Shopping</button>
+          <button id="checkoutBtn" class="btn btn-success">Complete Order via WhatsApp</button>
+        </div>
+        
+        <div class="cart-info">
+          <p>
+            <i class="fas fa-info-circle"></i>
+            Your order details will be sent to our WhatsApp number for confirmation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
